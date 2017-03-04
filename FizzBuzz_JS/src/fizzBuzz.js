@@ -24,5 +24,7 @@ FizzBuzz.prototype.play = function (number) {
     return "Fizz"
   } else if (this.isDivisibleByFive(number)) {
     return "Buzz"
+  } else {
+    return number;
   }
 };

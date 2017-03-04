@@ -42,17 +42,21 @@ describe('fizzBuzz', function() {
     });
   });
 
-  describe('When playing, it says: ', function() {
-    it('"Fizz" when number is divisible by 3', function() {
+  describe('When playing, it: ', function() {
+    it('returns "Fizz" when number is divisible by 3', function() {
       expect(fizzBuzz.play(3)).toEqual("Fizz");
     });
 
-    it('"Buzz" when number is divisible by 5', function() {
+    it('returns "Buzz" when number is divisible by 5', function() {
       expect(fizzBuzz.play(5)).toEqual("Buzz");
     });
 
-    it('"FizzBuzz" when number is both divisible by 3 and 5', function() {
+    it('returns "FizzBuzz" when number is both divisible by 3 and 5', function() {
       expect(fizzBuzz.play(15)).toEqual("FizzBuzz");
+    });
+
+    it('returns the number when is not divisible by 3 or 5', function() {
+      expect(fizzBuzz.play(1)).toEqual(1);
     });
   });
 });
